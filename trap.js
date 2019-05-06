@@ -14,11 +14,11 @@
  */
 var trap = function(height) {
   if (height.length > 2) {
-    var max_value = Math.max(...height);
-    var value_index = height.indexOf(max_value);
+    var maxValue = Math.max(...height);
+    var maxValue_index = height.indexOf(maxValue);
     var count = 0;
 
-    for (var i = 1; i < value_index; i++) {
+    for (var i = 1; i < maxValue_index; i++) {
       if (height[i] >= height[0]) {
         height[0] = height[i];
       } else {
@@ -26,7 +26,7 @@ var trap = function(height) {
       }
     }
 
-    for (var i = height.length - 1; i > value_index; i--) {
+    for (var i = height.length - 1; i > maxValue_index; i--) {
       if (height[i] >= height[height.length - 1]) {
         height[height.length - 1] = height[i];
       } else {
